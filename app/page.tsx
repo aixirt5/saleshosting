@@ -290,7 +290,7 @@ export default function Home() {
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-sm font-medium text-gray-300">SUPABASE_EMAIL</h3>
                     <button
-                      onClick={() => handleCopy('inquiry.1teqproviders@gmail.com', 'email')}
+                      onClick={() => handleCopy(process.env.NEXT_PUBLIC_SUPABASE_EMAIL || '', 'email')}
                       className="px-3 py-1 text-xs font-medium rounded-lg transition-all flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10"
                     >
                       {copiedField === 'email' ? (
@@ -308,7 +308,7 @@ export default function Home() {
                   </div>
                   <div className="bg-black/30 p-2 rounded-lg overflow-x-auto">
                     <p className="font-mono text-sm text-white break-all whitespace-pre-wrap">
-                      inquiry.1teqproviders@gmail.com
+                      {process.env.NEXT_PUBLIC_SUPABASE_EMAIL || 'Not set'}
                     </p>
                   </div>
                 </div>
@@ -316,7 +316,7 @@ export default function Home() {
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-sm font-medium text-gray-300">SUPABASE_PASSWORD</h3>
                     <button
-                      onClick={() => handleCopy('AkoAyMayLoboLumipadSaLangit123!@', 'password')}
+                      onClick={() => handleCopy(process.env.NEXT_PUBLIC_SUPABASE_PASSWORD || '', 'password')}
                       className="px-3 py-1 text-xs font-medium rounded-lg transition-all flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10"
                     >
                       {copiedField === 'password' ? (
@@ -334,7 +334,7 @@ export default function Home() {
                   </div>
                   <div className="bg-black/30 p-2 rounded-lg overflow-x-auto">
                     <p className="font-mono text-sm text-white break-all whitespace-pre-wrap">
-                      AkoAyMayLoboLumipadSaLangit123!@
+                      {process.env.NEXT_PUBLIC_SUPABASE_PASSWORD || 'Not set'}
                     </p>
                   </div>
                 </div>
